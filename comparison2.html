@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Comparisons</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawAllSheets);
+
+        function drawAllSheets() {
+            drawSheetName('em_argentina', 'SELECT A,B,C', emArgentinaResponseHandler);
+            drawSheetName('em_australia', 'SELECT A,B,C', emAustraliaResponseHandler);
+            drawSheetName('em_brazil', 'SELECT A,B,C', emBrazilResponseHandler);
+           
+            drawSheetName('em_germany', 'SELECT A,B,C', emGermanyResponseHandler);
+            drawSheetName('em_india', 'SELECT A,B,C', emIndiaResponseHandler);
+            drawSheetName('em_indonesia', 'SELECT A,B,C', emIndonesiaResponseHandler);
+            drawSheetName('em_italy', 'SELECT A,B,C', emItalyResponseHandler);
+            drawSheetName('em_japan', 'SELECT A,B,C', emJapanResponseHandler);
+            drawSheetName('em_mexico', 'SELECT A,B,C', emMexicoResponseHandler);
+            drawSheetName('em_russia', 'SELECT A,B,C', emRussiaResponseHandler);
+            
+            drawSheetName('em_southAfrica', 'SELECT A,B,C', emSouthAfricaResponseHandler);
+            
+            
+            drawSheetName('em_uk', 'SELECT A,B,C', emUKResponseHandler);
+            drawSheetName('em_usa', 'SELECT A,B,C', emUSAResponseHandler);
+            
+            
+        }
+
+        function drawSheetName(sheetName, query, responseHandler) {
+        var queryString = encodeURIComponent(query);
+        var query = new google.visualization.Query("https://docs.google.com/spreadsheets/d/1zUfq287_DMI331e81yaIFYvu4jc7EUNnhg9Y0l7r0UY/gviz/tq?sheet=" + sheetName + "&headers=1&tq=" + queryString);
+        query.send(responseHandler);
+        }
+
+        function emArgentinaResponseHandler(response) {
+        var data = response.getDataTable();
+        
+        var options = {
+          title: 'Argentina',
+          hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+        };
+
+        var chart = new google.visualization.AreaChart(
+            document.getElementById("chart_div1"));
+        chart.draw(data, options);
+        } 
+
+
+
+//_____________________________________________________________
+    
+function emAustraliaResponseHandler(response) {
+    var data = response.getDataTable();
+    
+    var options = {
+      title: 'Australia',
+      hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+      vAxis: {minValue: 0}
+    };
+
+    var chart = new google.visualization.AreaChart(
+        document.getElementById("chart_div2"));
+    chart.draw(data, options);} 
+//_____________________________________________________________
+
+function emBrazilResponseHandler(response) {
+    var data = response.getDataTable();
+    
+    var options = {
+      title: 'Brazil',
+      hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+      vAxis: {minValue: 0}
+    };
+
+    var chart = new google.visualization.AreaChart(
+        document.getElementById("chart_div3"));
+    chart.draw(data, options);} 
+//_____________________________________________________________
+
+
+function emGermanyResponseHandler(response) {
+    var data = response.getDataTable();
+    
+    var options = {
+      title: 'Germany',
+      hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+      vAxis: {minValue: 0}
+    };
+
+    var chart = new google.visualization.AreaChart(
+        document.getElementById("chart_div4"));
+    chart.draw(data, options);} 
+//_____________________________________________________________
+function emIndiaResponseHandler(response) {
+    var data = response.getDataTable();
+    
+    var options = {
+      title: 'India',
+      hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+      vAxis: {minValue: 0}
+    };
+
+    var chart = new google.visualization.AreaChart(
+        document.getElementById("chart_div5"));
+    chart.draw(data, options);} 
+//_____________________________________________________________
+function emIndonesiaResponseHandler(response) {
+    var data = response.getDataTable();
+    
+    var options = {
+      title: 'Indonesia',
+      hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+      vAxis: {minValue: 0}
+    };
+
+    var chart = new google.visualization.AreaChart(
+        document.getElementById("chart_div6"));
+    chart.draw(data, options);} 
+//_____________________________________________________________
+function emItalyResponseHandler(response) {
+    var data = response.getDataTable();
+    
+    var options = {
+      title: 'Italy',
+      hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+      vAxis: {minValue: 0}
+    };
+
+    var chart = new google.visualization.AreaChart(
+        document.getElementById("chart_div7"));
+    chart.draw(data, options);} 
+//_____________________________________________________________
+function emJapanResponseHandler(response) {
+    var data = response.getDataTable();
+    
+    var options = {
+      title: 'Japan',
+      hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+      vAxis: {minValue: 0}
+    };
+
+    var chart = new google.visualization.AreaChart(
+        document.getElementById("chart_div8"));
+    chart.draw(data, options);} 
+//_____________________________________________________________
+function emMexicoResponseHandler(response) {
+    var data = response.getDataTable();
+    
+    var options = {
+      title: 'Mexico',
+      hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+      vAxis: {minValue: 0}
+    };
+
+    var chart = new google.visualization.AreaChart(
+        document.getElementById("chart_div9"));
+    chart.draw(data, options);} 
+//_____________________________________________________________
+function emRussiaResponseHandler(response) {
+    var data = response.getDataTable();
+    
+    var options = {
+      title: 'Russia',
+      hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+      vAxis: {minValue: 0}
+    };
+
+    var chart = new google.visualization.AreaChart(
+        document.getElementById("chart_div10"));
+    chart.draw(data, options);} 
+//_____________________________________________________________
+
+function emSouthAfricaResponseHandler(response) {
+    var data = response.getDataTable();
+    
+    var options = {
+      title: 'South Africa',
+      hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+      vAxis: {minValue: 0}
+    };
+
+    var chart = new google.visualization.AreaChart(
+        document.getElementById("chart_div11"));
+    chart.draw(data, options);} 
+//_____________________________________________________________
+
+
+function emUKResponseHandler(response) {
+    var data = response.getDataTable();
+    
+    var options = {
+      title: 'United Kingdom',
+      hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+      vAxis: {minValue: 0}
+    };
+
+    var chart = new google.visualization.AreaChart(
+        document.getElementById("chart_div12"));
+    chart.draw(data, options);} 
+//_____________________________________________________________
+function emUSAResponseHandler(response) {
+    var data = response.getDataTable();
+    
+    var options = {
+      title: 'United States',
+      hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+      vAxis: {minValue: 0}
+    };
+
+    var chart = new google.visualization.AreaChart(
+        document.getElementById("chart_div13"));
+    chart.draw(data, options);} 
+//_____________________________________________________________
+
+
+
+
+  
+    </script>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        G20 Visualized</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="intro.html">Introduction</a>
+                </li>
+                <li>
+                    <a href="militaryspending.html">Military Spending</a>
+                </li>
+                <li>
+                    <a href="healthcarespending.html">Healthcare Spending</a>
+                </li>
+                <li>
+                    <a href="educationspending.html">Education Spending</a>
+                </li>
+                <li>
+                    <a href="spendingPerCapita.html">Spending (Per Capita)</a>
+
+                </li>
+                <li>
+                    <a href="comparison.html">Comparing Healthcare with Military</a>
+                </li>
+                <li>
+                    <a href="comparison2.html">Comparing Education with Military</a>
+                </li>
+                <li>
+                    <a href="trend.html">Trend/Growth</a>
+                </li>
+                <li>
+                    <a href="Sheet1.html">Missing Data in Education</a>
+                </li>
+                
+
+                
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content use this to display everything  -->
+        <!-- Page Content use this to display everything  -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a href="#menu-toggle" class="btn btn-primary" id="menu-toggle">Menu</a>
+
+                        
+                        
+                        <center>
+                            <h3><strong>COMPARING EDUCATION AND MILITARY FOR EVERY COUNTRY</strong></h3>
+                            
+                            <div id="chart_div1" style="width: 100%; height: 500px;"></div>
+                            <div id="chart_div2" style="width: 100%; height: 500px;"></div>
+                            <div id="chart_div3" style="width: 100%; height: 500px;"></div>
+                            <div id="chart_div4" style="width: 100%; height: 500px;"></div>
+                            <div id="chart_div5" style="width: 100%; height: 500px;"></div>
+                            <div id="chart_div6" style="width: 100%; height: 500px;"></div>
+                            <div id="chart_div7" style="width: 100%; height: 500px;"></div>
+                            <div id="chart_div8" style="width: 100%; height: 500px;"></div>
+                            <div id="chart_div9" style="width: 100%; height: 500px;"></div>
+                            <div id="chart_div10" style="width: 100%; height: 500px;"></div>
+                            <div id="chart_div11" style="width: 100%; height: 500px;"></div>
+                            <div id="chart_div12" style="width: 100%; height: 500px;"></div>
+                            <div id="chart_div13" style="width: 100%; height: 500px;"></div>
+                            
+    
+                         </center> 
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

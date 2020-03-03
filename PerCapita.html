@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Per Capita</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawAllSheets);
+
+        function drawAllSheets() {
+            drawSheetName('10_hgdp_percapita', 'SELECT A,B,C', hgdpPerCapita1ResponseHandler);
+            drawSheetName('11_hgdp_percapita', 'SELECT A,B,C', hgdpPerCapita2ResponseHandler);
+            drawSheetName('12_hgdp_percapita', 'SELECT A,B,C', hgdpPerCapita3ResponseHandler);
+            drawSheetName('13_hgdp_percapita', 'SELECT A,B,C', hgdpPerCapita4ResponseHandler);
+            drawSheetName('14_hgdp_percapita', 'SELECT A,B,C', hgdpPerCapita5ResponseHandler);
+            drawSheetName('15_hgdp_percapita', 'SELECT A,B,C', hgdpPerCapita6ResponseHandler);
+            drawSheetName('16_hgdp_percapita', 'SELECT A,B,C', hgdpPerCapita7ResponseHandler);
+            
+        }
+
+        function drawSheetName(sheetName, query, responseHandler) {
+        var queryString = encodeURIComponent(query);
+        var query = new google.visualization.Query("https://docs.google.com/spreadsheets/d/1zUfq287_DMI331e81yaIFYvu4jc7EUNnhg9Y0l7r0UY/gviz/tq?sheet=" + sheetName + "&headers=1&tq=" + queryString);
+        query.send(responseHandler);
+        }
+
+        function hgdpPerCapita1ResponseHandler(response) {
+        var data = response.getDataTable();
+       
+
+        var options = {
+            title:'2010',
+            width: 600,
+            height: 400,
+            legend: { position: 'top', maxLines: 3 },
+            bar: { groupWidth: '75%' },
+            isStacked: true
+      };
+
+        var chart = new google.visualization.BarChart(
+            document.getElementById("chart_div1"));
+        chart.draw(data, options);
+        } 
+
+
+
+//_____________________________________________________________
+    
+function hgdpPerCapita1ResponseHandler(response) {
+        var data = response.getDataTable();
+       
+
+        var options = {
+            title:'2010',
+            width: 600,
+            height: 400,
+            legend: { position: 'top', maxLines: 3 },
+            bar: { groupWidth: '75%' },
+            isStacked: true
+      };
+
+        var chart = new google.visualization.BarChart(
+            document.getElementById("chart_div1"));
+        chart.draw(data, options);
+        } 
+//_____________________________________________________________
+
+function hgdpPerCapita2ResponseHandler(response) {
+        var data = response.getDataTable();
+       
+
+        var options = {
+            title:'2011',
+            width: 600,
+            height: 400,
+            legend: { position: 'top', maxLines: 3 },
+            bar: { groupWidth: '75%' },
+            isStacked: true
+      };
+
+        var chart = new google.visualization.BarChart(
+            document.getElementById("chart_div2"));
+        chart.draw(data, options);
+        } 
+//_____________________________________________________________
+function hgdpPerCapita3ResponseHandler(response) {
+        var data = response.getDataTable();
+       
+
+        var options = {
+            title:'2012',
+            width: 600,
+            height: 400,
+            legend: { position: 'top', maxLines: 3 },
+            bar: { groupWidth: '75%' },
+            isStacked: true
+      };
+
+        var chart = new google.visualization.BarChart(
+            document.getElementById("chart_div3"));
+        chart.draw(data, options);
+        }  
+//_____________________________________________________________
+function hgdpPerCapita4ResponseHandler(response) {
+        var data = response.getDataTable();
+       
+
+        var options = {
+            title:'2013',
+            width: 600,
+            height: 400,
+            legend: { position: 'top', maxLines: 3 },
+            bar: { groupWidth: '75%' },
+            isStacked: true
+      };
+
+        var chart = new google.visualization.BarChart(
+            document.getElementById("chart_div4"));
+        chart.draw(data, options);
+        } 
+//_____________________________________________________________
+function hgdpPerCapita5ResponseHandler(response) {
+        var data = response.getDataTable();
+       
+
+        var options = {
+            title:'2014',
+            width: 600,
+            height: 400,
+            legend: { position: 'top', maxLines: 3 },
+            bar: { groupWidth: '75%' },
+            isStacked: true
+      };
+
+        var chart = new google.visualization.BarChart(
+            document.getElementById("chart_div5"));
+        chart.draw(data, options);
+        } 
+//_____________________________________________________________
+function hgdpPerCapita6ResponseHandler(response) {
+        var data = response.getDataTable();
+       
+
+        var options = {
+            title:'2015',
+            width: 600,
+            height: 400,
+            legend: { position: 'top', maxLines: 3 },
+            bar: { groupWidth: '75%' },
+            isStacked: true
+      };
+
+        var chart = new google.visualization.BarChart(
+            document.getElementById("chart_div6"));
+        chart.draw(data, options);
+        }  
+//_____________________________________________________________
+
+function hgdpPerCapita7ResponseHandler(response) {
+        var data = response.getDataTable();
+       
+
+        var options = {
+            title:'2016',
+            width: 600,
+            height: 400,
+            legend: { position: 'top', maxLines: 3 },
+            bar: { groupWidth: '75%' },
+            isStacked: true
+      };
+
+        var chart = new google.visualization.BarChart(
+            document.getElementById("chart_div7"));
+        chart.draw(data, options);
+        }  
+
+
+
+  
+    </script>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        G20 Visualized</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="intro.html">Introduction</a>
+                </li>
+                <li>
+                    <a href="militaryspending.html">Military Spending</a>
+                </li>
+                <li>
+                    <a href="healthcarespending.html">Healthcare Spending</a>
+                </li>
+                <li>
+                    <a href="educationspending.html">Education Spending</a>
+                </li>
+                <li>
+                    <a href="PerCapita.html">Per Capita</a>
+
+                </li>
+                <li>
+                    <a href="comparison.html">Comparing Healthcare with Military</a>
+                </li>
+                <li>
+                    <a href="comparison2.html">Comparing Education with Military</a>
+                </li>
+                <li>
+                    <a href="trend.html">Trend/Growth</a>
+                </li>
+                <li>
+                    <a href="Sheet1.html">Missing Data in Education</a>
+                </li>
+                
+
+                
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content use this to display everything  -->
+        <!-- Page Content use this to display everything  -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a href="#menu-toggle" class="btn btn-primary" id="menu-toggle">Menu</a>
+
+                        
+                        
+                        <center>
+                            <h3><strong>HEALTHCARE PER CAPITA TO GDP PER CAPITA</strong></h3>
+                            
+                            <div id="chart_div1" style="width: 100%; height: 500px;"></div>
+                            <div id="chart_div2" style="width: 100%; height: 500px;"></div>
+                            <div id="chart_div3" style="width: 100%; height: 500px;"></div>
+                            <div id="chart_div4" style="width: 100%; height: 500px;"></div>
+                            <div id="chart_div5" style="width: 100%; height: 500px;"></div>
+                            <div id="chart_div6" style="width: 100%; height: 500px;"></div>
+                            <div id="chart_div7" style="width: 100%; height: 500px;"></div>
+                            
+    
+                         </center> 
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

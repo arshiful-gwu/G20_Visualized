@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Spending</title>
+
+    <!-- Bootstrap Core CSS
+    <link href="css/bootstrap.min.css" rel="stylesheet">-->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+<script>
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawAllSheets);
+
+    function drawAllSheets() {
+
+        
+        
+        drawSheetName('educationspending', 'SELECT A,D',  
+                      educationSpendingResponseHandler10);
+        drawSheetName('educationspending', 'SELECT A,E',  
+                      educationSpendingResponseHandler11);
+        drawSheetName('educationspending', 'SELECT A,F',  
+                      educationSpendingResponseHandler12);
+        drawSheetName('educationspending', 'SELECT A,G',  
+                      educationSpendingResponseHandler13);
+        drawSheetName('educationspending', 'SELECT A,H',  
+                      educationSpendingResponseHandler14);
+        drawSheetName('educationspending', 'SELECT A,I',  
+                      educationSpendingResponseHandler15);
+        drawSheetName('educationspending', 'SELECT A,J',  
+                      educationSpendingResponseHandler16);
+        
+        
+        
+    } //drawAllSheets
+
+    function drawSheetName(sheetName, query, responseHandler) {
+        var queryString = encodeURIComponent(query);
+        var query = new google.visualization.Query(
+           
+            "https://docs.google.com/spreadsheets/d/1zUfq287_DMI331e81yaIFYvu4jc7EUNnhg9Y0l7r0UY/gviz/tq?sheet=" + sheetName + "&headers=1&tq=" + queryString
+        
+            );
+        query.send(responseHandler);
+    } //drawSheetName
+
+
+
+    function educationSpendingResponseHandler10(response) {
+        var data = response.getDataTable();
+        data.sort({column: 1, desc: true});
+
+        var options = {
+            height: 400,
+            colorAxis : {colors: ['#c199c9','#100e4a']}, //orange to blue
+            //title: 'Top Countries by education Spending 2015'
+        };
+
+        var chart = new google.visualization.GeoChart(
+            document.getElementById("education_spending_div_10"));
+        chart.draw(data, options);
+    } //topeducationSpendingResponseHandler
+
+    function educationSpendingResponseHandler11(response) {
+        var data = response.getDataTable();
+        data.sort({column: 1, desc: true});
+
+        var options = {
+            height: 400,
+            colorAxis : {colors: ['#c199c9','#100e4a']}, //orange to blue
+            //title: 'Top Countries by education Spending 2015'
+        };
+
+        var chart = new google.visualization.GeoChart(
+            document.getElementById("education_spending_div_11"));
+        chart.draw(data, options);
+    } //topeducationSpendingResponseHandler
+
+    function educationSpendingResponseHandler12(response) {
+        var data = response.getDataTable();
+        data.sort({column: 1, desc: true});
+
+        var options = {
+            height: 400,
+            colorAxis : {colors: ['#c199c9','#100e4a']}, //orange to blue
+            //title: 'Top Countries by education Spending 2015'
+        };
+
+        var chart = new google.visualization.GeoChart(
+            document.getElementById("education_spending_div_12"));
+        chart.draw(data, options);
+    } //topeducationSpendingResponseHandler
+
+    function educationSpendingResponseHandler13(response) {
+        var data = response.getDataTable();
+        data.sort({column: 1, desc: true});
+
+        var options = {
+            height: 400,
+            colorAxis : {colors: ['#c199c9','#100e4a']}, //orange to blue
+            //title: 'Top Countries by education Spending 2015'
+        };
+
+        var chart = new google.visualization.GeoChart(
+            document.getElementById("education_spending_div_13"));
+        chart.draw(data, options);
+    } //topeducationSpendingResponseHandler
+
+    function educationSpendingResponseHandler14(response) {
+        var data = response.getDataTable();
+        data.sort({column: 1, desc: true});
+
+        var options = {
+            height: 400,
+            colorAxis : {colors: ['#c199c9','#100e4a']}, //orange to blue
+            //title: 'Top Countries by education Spending 2015'
+        };
+
+        var chart = new google.visualization.GeoChart(
+            document.getElementById("education_spending_div_14"));
+        chart.draw(data, options);
+    } //topeducationSpendingResponseHandler
+
+    function educationSpendingResponseHandler15(response) {
+        var data = response.getDataTable();
+        data.sort({column: 1, desc: true});
+
+        var options = {
+            height: 400,
+            colorAxis : {colors: ['#c199c9','#100e4a']}, //orange to blue
+            //title: 'Top Countries by education Spending 2015'
+        };
+
+        var chart = new google.visualization.GeoChart(
+            document.getElementById("education_spending_div_15"));
+        chart.draw(data, options);
+    } //topeducationSpendingResponseHandler
+
+    function educationSpendingResponseHandler16(response) {
+        var data = response.getDataTable();
+        data.sort({column: 1, desc: true});
+
+        var options = {
+            height: 400,
+            colorAxis : {colors: ['#c199c9','#100e4a']}, //orange to blue
+            //title: 'Top Countries by education Spending 2015'
+        };
+
+        var chart = new google.visualization.GeoChart(
+            document.getElementById("education_spending_div_16"));
+        chart.draw(data, options);
+    } //topeducationSpendingResponseHandler
+
+   
+
+
+
+
+
+</script>
+
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        G20 Visualized</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="intro.html">Introduction</a>
+                </li>
+                <li>
+                    <a href="militaryspending.html">Military Spending</a>
+                </li>
+                <li>
+                    <a href="healthcarespending.html">Healthcare Spending</a>
+                </li>
+                <li>
+                    <a href="educationspending.html">Education Spending</a>
+                </li>
+                <li>
+                    <a href="PerCapita.html">Per Capita</a>
+
+                </li>
+                <li>
+                    <a href="comparison.html">Comparing Healthcare with Military</a>
+                </li>
+                <li>
+                    <a href="comparison2.html">Comparing Education with Military</a>
+                </li>
+                <li>
+                    <a href="trend.html">Trend/Growth</a>
+                </li>
+                <li>
+                    <a href="Sheet1.html">Missing Data in Education</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content use this to display everything  -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a href="#menu-toggle" class="btn btn-primary" id="menu-toggle">Menu</a>
+
+                        <center>
+                        
+                        <h3><strong>EDUCATION SPENDING 2010-2016</strong></h3>
+                        
+                        <h4>2010</h4>
+                        <div id="education_spending_div_10"style="width: 900px; height: 500px"></div>                        
+                        <h4>2011</h4>
+                        <div id="education_spending_div_11"style="width: 900px; height: 500px"></div>                        
+                        <h4>2012</h4>
+                        <div id="education_spending_div_12"style="width: 900px; height: 500px"></div>  
+                        <h4>2013</h4>
+                        <div id="education_spending_div_13"style="width: 900px; height: 500px"></div>
+                        <h4>2014</h4>
+                        <div id="education_spending_div_14"style="width: 900px; height: 500px"></div>
+                        <h4>2015</h4>
+                        <div id="education_spending_div_15"style="width: 900px; height: 500px"></div>
+                        <h4>2016</h4>
+                        <div id="education_spending_div_16"style="width: 900px; height: 500px"></div>
+                        
+                        
+
+                     </center>                 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

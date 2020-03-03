@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>G20 Visualized</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+  
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        G20 Visualized</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="intro.html">Introduction</a>
+                </li>
+                <li>
+                    <a href="militaryspending.html">Military Spending</a>
+                </li>
+                <li>
+                    <a href="healthcarespending.html">Healthcare Spending</a>
+                </li>
+                <li>
+                    <a href="educationspending.html">Education Spending</a>
+                </li>
+                <li>
+                    <a href="PerCapita.html">Per Capita</a>
+
+                </li>
+                <li>
+                    <a href="comparison.html">Comparing Healthcare with Military</a>
+                </li>
+                <li>
+                    <a href="comparison2.html">Comparing Education with Military</a>
+                </li>
+                <li>
+                    <a href="trend.html">Trend/Growth</a>
+                </li>
+                <li>
+                    <a href="Sheet1.html">Missing Data in Education</a>
+                </li>
+                
+
+                
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content use this to display everything  -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a href="#menu-toggle" class="btn btn-primary" id="menu-toggle">Menu</a>
+
+                        <center>
+                        <h1>INTRODUCTION</h1>
+                        <h3>VISUALIZATION OF <strong>G20 DATA</strong></h3>
+                        <p>The Group of 20 is an organization of finance ministers and central bank governors from 19 individual countries and the European Union.</p> 
+
+                        <P>In addition to the United States, those countries are Argentina, Australia, Brazil, Britain, Canada, China, France, Germany, India, Indonesia, Italy, Japan, Mexico, Russia, Saudi Arabia, South Africa, South Korea and Turkey. Collectively, its members represent more than 80 percent of the world’s gross domestic product.</p>
+                        
+                        <p>In this project we will be looking into the GDP, Healthcare, Military and Education Expenditure Data of these countries through data visualization techniques.</p> 
+
+                        
+                        <table class="table table-hover table-bordered">
+                            <thead><th><strong>Through visualization we will compare:</strong></th></thead>
+                            <tbody>
+                                <tr><td>The spending data in the healthcare, military and education industry to that country’s GDP</td></tr>
+                                <tr><td>The education and health to the overall military spending of the country</td></tr>
+                                <tr><td>The per person educational spending to the per person GDP</td></tr>
+                                <tr><td>The per person healthcare spending to the per person GDP</td></tr>
+                                <tr><td>The per person military spending to the per person GDP</td></tr>
+                            </tbody>
+
+                        </table>
+                        <table class="table table-hover table-bordered">
+                            <thead><th><strong>And Identify the:</strong></th></thead>
+                            <tbody>
+                                <tr><td>Fastest growing countries in healthcare and educational spending in fixed value and in percentage</td></tr>
+                                <tr><td>Any interesting and useful relationships and trends</td></tr>
+                            </tbody>
+
+                        </table>
+                        
+
+                     </center>                 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Trend/Growth</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+    <script>
+        google.charts.load('current', {'packages':['line']});
+        google.charts.setOnLoadCallback(drawAllSheets);
+    
+        function drawAllSheets() {
+    
+            
+            
+            drawSheetName('militarySpendingTransposed', 'SELECT A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U',  
+                          militaryResponseHandler);
+            drawSheetName('healthcareSpendingTransposed', 'SELECT A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U',  
+                          healthcareResponseHandler);
+            drawSheetName('educationSpendingTransposed', 'SELECT A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U',  
+                          educationResponseHandler);
+            drawSheetName('gdpTransposed', 'SELECT A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T',  
+                          gdpResponseHandler);
+            
+            
+        } //drawAllSheets
+    
+        function drawSheetName(sheetName, query, responseHandler) {
+            var queryString = encodeURIComponent(query);
+            var query = new google.visualization.Query(
+               
+                "https://docs.google.com/spreadsheets/d/1zUfq287_DMI331e81yaIFYvu4jc7EUNnhg9Y0l7r0UY/gviz/tq?sheet=" + sheetName + "&headers=1&tq=" + queryString
+            
+                );
+            query.send(responseHandler);
+        } //drawSheetName
+    
+    
+    
+        function militaryResponseHandler(response) {
+            var data = response.getDataTable();
+            //data.sort({column: 1, desc: true});
+    
+            var options = {
+                chart: {
+                title: 'Military Spendings',
+                subtitle: 'in dollars (USD)'
+                },
+                width: 900,
+                height: 500
+            };
+    
+            var chart = new google.charts.Line(
+                document.getElementById("all_military_spending_div"));
+            chart.draw(data, google.charts.Line.convertOptions(options));
+        }
+
+        function healthcareResponseHandler(response) {
+            var data = response.getDataTable();
+            //data.sort({column: 1, desc: true});
+    
+            var options = {
+                chart: {
+                title: 'Healthcare Spendings',
+                subtitle: 'in dollars (USD)'
+                },
+                width: 900,
+                height: 500
+            };
+    
+            var chart = new google.charts.Line(
+                document.getElementById("all_healthcare_spending_div"));
+            chart.draw(data, google.charts.Line.convertOptions(options));
+        }
+        
+        function educationResponseHandler(response) {
+            var data = response.getDataTable();
+            //data.sort({column: 1, desc: true});
+    
+            var options = {
+                chart: {
+                title: 'Education Spendings',
+                subtitle: 'in dollars (USD)'
+                },
+                width: 900,
+                height: 500
+            };
+    
+            var chart = new google.charts.Line(
+                document.getElementById("all_education_spending_div"));
+            chart.draw(data, google.charts.Line.convertOptions(options));
+        }
+
+        function gdpResponseHandler(response) {
+            var data = response.getDataTable();
+            //data.sort({column: 1, desc: true});
+    
+            var options = {
+                chart: {
+                title: 'GDP',
+                subtitle: 'in dollars (USD)'
+                },
+                width: 900,
+                height: 500
+            };
+    
+            var chart = new google.charts.Line(
+                document.getElementById("gdp_div"));
+            chart.draw(data, google.charts.Line.convertOptions(options));
+        }
+        
+    
+    
+    
+    
+    </script>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        G20 Visualized</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="intro.html">Introduction</a>
+                </li>
+                <li>
+                    <a href="militaryspending.html">Military Spending</a>
+                </li>
+                <li>
+                    <a href="healthcarespending.html">Healthcare Spending</a>
+                </li>
+                <li>
+                    <a href="educationspending.html">Education Spending</a>
+                </li>
+                <li>
+                    <a href="PerCapita.html">Per Capita</a>
+
+                </li>
+                <li>
+                    <a href="comparison.html">Comparing Healthcare with Military</a>
+                </li>
+                <li>
+                    <a href="comparison2.html">Comparing Education with Military</a>
+                </li>
+                <li>
+                    <a href="trend.html">Trend/Growth</a>
+                </li>
+                <li>
+                    <a href="Sheet1.html">Missing Data in Education</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content use this to display everything  -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a href="#menu-toggle" class="btn btn-primary" id="menu-toggle">Menu</a>
+
+                        <h4>Military Spending</h4>
+                        <div id="all_military_spending_div"style="width: 900px; height: 500px"></div>   
+                        <h4>Healthcare Spending</h4>
+                        <div id="all_healthcare_spending_div"style="width: 900px; height: 500px"></div>  
+                        <h4>Education Spending</h4>
+                        <div id="all_education_spending_div"style="width: 900px; height: 500px"></div>  
+                        <h4>GDP</h4>
+                        <div id="gdp_div"style="width: 900px; height: 500px"></div>                     
+                        
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>
+
+
